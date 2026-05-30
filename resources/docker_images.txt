@@ -1,6 +1,0 @@
-#Split and Save
-docker save rabbitmq:4.1.8-management | gzip | split -b 75M - rabbitmq:4.1.8-management.tar.gz.part_
-
-#Combine and Load
-cat rabbitmq:4.1.8-management.tar.gz.part_* | docker load
-
